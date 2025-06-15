@@ -16,6 +16,7 @@ import TeacherSignIn from "../pages/teacher/auth/TeacherSignIn";
 // import TeacherSignUp from "../pages/teacher/auth/TeacherSignUp";
 import TeacherPage from "../pages/teacher/TeacherPage";
 import Home from "../pages/Home";
+import HomeButton from "../components/admin/HomeButton";
 
 const adminMenu = [
   { title: "Student", path: "/admin/users", icon: User },
@@ -34,6 +35,8 @@ function Layout() {
   }, []);
   return (
     <>
+      <HomeButton />
+
       <Outlet />
     </>
   );
@@ -49,6 +52,7 @@ function LayoutTeacher() {
   }, []);
   return (
     <>
+      <HomeButton />
       <Outlet />
     </>
   );
@@ -63,6 +67,8 @@ function LayoutAdmin() {
   }, []);
   return (
     <>
+      <HomeButton />
+
       <div className="block">
         <Sidebar menuItems={adminMenu} logo="Admin Dashboard" />
       </div>
