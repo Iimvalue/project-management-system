@@ -10,8 +10,8 @@ export default function Dashboard() {
   const path = useLocation();
   useEffect(() => {
     localStorage.getItem("username") == null ? navigate("/admin/login") : "";
-    localStorage.getItem("role") == "user" ? navigate("/") : "";
-    localStorage.getItem("role") == "teacher" ? navigate("/admin/teacher/") : "";
+    localStorage.getItem("role") == "student" ? navigate("/user/") : "";
+    localStorage.getItem("role") == "teacher" ? navigate("/teacher/") : "";
 console.log(path.pathname);
 
   }, []);

@@ -18,8 +18,10 @@ export default function TeacherPage() {
 
   useEffect(() => {
     localStorage.getItem("username") == null ? navigate("/teacher/login") : "";
-    localStorage.getItem("role") == "user" ? navigate("/user/") : "";
+    localStorage.getItem("role") == "student" ? navigate("/user/") : "";
     localStorage.getItem("role") == "teacher" ? navigate("/teacher/") : "";
+    localStorage.getItem("role") == "admin" ? navigate("/admin/") : "";
+
   }, []);
 
   // Fetch current teacher and all users

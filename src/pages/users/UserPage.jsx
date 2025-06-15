@@ -26,6 +26,8 @@ export default function StudentPage() {
     localStorage.getItem("username") == null ? navigate("/user/login") : "";
     localStorage.getItem("role") == "user" ? navigate("/user/") : "";
     localStorage.getItem("role") == "teacher" ? navigate("/teacher/") : "";
+    localStorage.getItem("role") == "admin" ? navigate("/admin/") : "";
+
   }, []);
 
   // Fetch current user and all users on component mount

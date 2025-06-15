@@ -81,7 +81,7 @@ export default function UserSignIn() {
 
   const closeModal = () => {
     setShowModal(false);
-    if (localStorage.getItem("role") == "user") {
+    if (localStorage.getItem("role") == "student") {
       navigate("/user/");
     } else {
       navigate("/user/login");
